@@ -11,3 +11,10 @@ class TestClass(unittest.TestCase):
         Method that runs before each individual test methods run.
         """
         self.new_user = User('OwitiCharles','XyZ3thf1')
+
+    def test_init(self):
+        """
+        test case to chek if the object has been initialized correctly
+        """
+        self.assertEqual(self.new_user.username,'OwitiCharles')
+        self.assertEqual(self.new_user.password,'XyZ3thf1')
