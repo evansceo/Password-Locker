@@ -38,3 +38,11 @@ class TestCredentials(unittest.TestCase):
 
         """
         self.new_credential = Credentials('Gmail','evansceo','yx5Gij43')
+
+    def test_init(self):
+        """
+        Test case to check if a new Credentials instance has been initialized correctly
+        """
+        self.assertEqual(self.new_credential.account,'Gmail')
+        self.assertEqual(self.new_credential.userName,'Owiti_Charles')
+        self.assertEqual(self.new_credential.password,'yx5Gij43')
