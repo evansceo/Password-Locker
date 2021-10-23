@@ -44,7 +44,7 @@ class TestCredentials(unittest.TestCase):
         Test case to check if a new Credentials instance has been initialized correctly
         """
         self.assertEqual(self.new_credential.account,'Gmail')
-        self.assertEqual(self.new_credential.userName,'Owiti_Charles')
+        self.assertEqual(self.new_credential.userName,'evansceo')
         self.assertEqual(self.new_credential.password,'yx5Gij43')
 
     def save_credential_test(self):
@@ -54,3 +54,9 @@ class TestCredentials(unittest.TestCase):
         """
         self.new_credential.save_details()
         self.assertEqual(len(Credentials.credentials_list),1)
+
+    def tearDown(self):
+        '''
+        method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
